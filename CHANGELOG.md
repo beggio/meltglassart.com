@@ -34,3 +34,27 @@ once that change has actually been built in the Squarespace editor.
 - Repo access scoped to a dedicated GitHub Deploy Key (not the account owner's personal SSH
   key) — read-write, bound to this repo only.
 - `squarespace-site` skill relocated here from `~/.claude/skills/` as a project-scoped skill.
+
+## 2026-09-30 — Global skill wired to the repo, not just copied
+
+Follow-up to the relocation above: `~/.claude/skills/squarespace-site/` (the global,
+always-discovered copy) is no longer an independent copy that could silently drift from this
+repo. It's now:
+
+- `assets/`, `references/`, `private/` — real Windows directory **junctions** into
+  `<repo>/.claude/skills/squarespace-site/`. A `git pull` in the repo clone
+  (`C:\Users\beggi\source\meltglassart.com\`) is immediately visible at the global location
+  too — same files on disk, no separate sync step.
+- `SKILL.md` — **not** linked; it's a plain copy. Windows blocked a true file symlink
+  ("Administrator privilege required" — junctions only work for directories, and this account
+  doesn't have Developer Mode enabled). This one file will drift from the repo's copy if
+  either side is edited without the other being updated to match. Fix options, either: enable
+  Developer Mode (Settings → For developers) so a real symlink can replace the copy, or keep
+  manually re-copying `SKILL.md` after edits on either side.
+- The pre-relocation original at `~/.claude/skills/squarespace-site/` couldn't be fully
+  deleted — Windows reports the directory itself "busy" (this session has had it pinned as
+  its active working directory the entire time). All of its *contents* were removed first, so
+  what's left is an empty, harmless directory entry; full removal needs a session restart to
+  release the lock. A complete backup of the pre-relocation content was copied to
+  `~/.claude/skills/backup/squarespace-site/` before any of this, independent of that lock
+  issue.
