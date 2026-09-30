@@ -1,0 +1,3 @@
+# Exclude everything in this directory (credentials and other secrets live here).
+*
+!.gitignore

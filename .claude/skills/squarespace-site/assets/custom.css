@@ -1,0 +1,49 @@
+/* ===========================================================
+   Melt Glass Art Studio — Custom CSS
+   Paste into: Website -> Website Tools -> Custom CSS
+   Keep every rule commented with WHY it exists. A future editor
+   cannot see these rules in the UI and will not know what broke.
+   Before adding a rule: check whether a native site style does it.
+   =========================================================== */
+
+:root {
+  /* Real brand values from SKILL.md Phase 3. Role assignment below (not dictated by the
+     brand doc, which lists the raw palette + pairings): --brand-text is body copy and MUST
+     clear 4.5:1 on --brand-bg — measured #823038 on #FAF3EC ≈ 7.85:1, passes with margin.
+     --brand-primary (#3E7AB5 ≈ 4.1:1 on --brand-bg) is for headings/buttons/UI only — large
+     text / non-body uses, which only need 3:1 — do not use it for paragraph text. */
+  --brand-primary:   #3E7AB5;  /* studio blue — headings, links, buttons (large-text only) */
+  --brand-secondary: #E76D18;  /* burnt orange — secondary CTAs; documented pairing w/ bg */
+  --brand-accent:    #F37920;  /* logo orange — highlights, hover states */
+  --brand-bg:        #FAF3EC;  /* cream — page background */
+  --brand-text:      #823038;  /* deep maroon — body copy; 4.5:1-safe on --brand-bg */
+
+  --space-section-desktop: 6rem;
+  --space-section-mobile:  3rem;
+}
+
+/* --- Buttons -------------------------------------------------
+   Reason: brand requires square corners; native style only
+   offers pill/rounded. Remove if Squarespace adds the option. */
+.sqs-block-button-element {
+  border-radius: 0;
+}
+
+/* --- Section rhythm ------------------------------------------
+   Reason: tightening default section padding on mobile only.
+   Fluid Engine keeps a SEPARATE mobile layout — verify visually,
+   do not assume desktop edits propagate. */
+@media screen and (max-width: 767px) {
+  .page-section {
+    padding-top: var(--space-section-mobile);
+    padding-bottom: var(--space-section-mobile);
+  }
+}
+
+/* --- FRAGILE ZONE --------------------------------------------
+   Rules below target Squarespace-generated class names and WILL
+   break when Squarespace ships changes. Each must say what it was
+   meant to do so it can be rebuilt.
+   Example:
+   .header-nav-item--folder { }   was: hide folder carets in nav
+   ------------------------------------------------------------- */
