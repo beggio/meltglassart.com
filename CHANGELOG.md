@@ -58,3 +58,13 @@ repo. It's now:
   release the lock. A complete backup of the pre-relocation content was copied to
   `~/.claude/skills/backup/squarespace-site/` before any of this, independent of that lock
   issue.
+
+## 2026-10-01 — SKILL.md gap closed
+
+Developer Mode enabled (user action, Windows Settings → Update & Security → For developers),
+then a sign-out/sign-in to refresh the shell's security token — Windows doesn't grant the
+symlink privilege to already-running processes just because the setting changed. After that,
+`SKILL.md` was successfully relinked as a real symlink, same as the other three items. The
+global skill location (`~/.claude/skills/squarespace-site/`) is now **fully** link-based —
+`SKILL.md`, `assets/`, `references/`, `private/` all point back into this repo's clone with
+no plain copies left anywhere. The drift risk noted in the previous entry no longer applies.
