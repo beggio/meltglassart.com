@@ -204,3 +204,31 @@ per the migration's content-source decision).
 the 29-product migration count — an unnamed, unpriced entry isn't a real catalog item to
 migrate. If it turns out to represent a real product the client wants carried over, she'd need
 to give it a name and price in Square (or just describe it) for it to be added properly.
+
+## 2026-10-03 — Catalog hand-off: Brooke manages products directly in Squarespace
+
+The client asked for a way for Brooke to add, remove, or hide shop products herself, without
+needing a developer or a Claude Code session for routine catalog changes.
+
+**Finding**: Squarespace's native product admin already covers all three needs — no custom
+tooling needed. Confirmed directly by using the same admin screens this migration has been
+using all along:
+- **Add**: `Products & Services → Products → Add Product`, same flow already used to build
+  the 5 live Nightlights products.
+- **Remove**: select a product (or products) on the list → **Delete** — permanent.
+- **Hide/show**: not part of the creation-time Save dropdown (that only appears when creating
+  a new product) — it's a persistent **Visibility** combobox (Public / Hidden / Scheduled)
+  inside each existing product's **Organization** tab. This is the real mechanism; worth
+  calling out since it's not where a first guess would look.
+
+**Delivered**: `SHOP-MANAGEMENT-GUIDE.md` (repo root) — a screenshot-illustrated, plain-
+language guide for Brooke covering all three actions, with 4 screenshots saved to
+`.claude/skills/squarespace-site/assets/guide/`.
+
+**Decision — `shop-inventory.md` frozen as a migration baseline**: now that Brooke owns the
+live catalog directly in Squarespace, `shop-inventory.md` stops being kept in sync with it.
+It documents the initial 29-product migration (5 verified live, 24 specified but not yet
+built) as a point-in-time record. Squarespace's own admin is the live source of truth for the
+catalog going forward — this project does not try to resync the two. The remaining 24-product
+build-out is unaffected and can still be resumed as a project task if asked; only Brooke's
+independent day-to-day edits fall outside this file's scope now.

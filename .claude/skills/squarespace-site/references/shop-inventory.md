@@ -1,5 +1,13 @@
 # Shop inventory — Square "Shop Now" → Squarespace "Shop"
 
+**Frozen migration baseline — not a live mirror.** This file documents the initial 29-product
+migration from Square (what was ported, its rewritten copy, and its status as of that
+migration) as of 2026-10-02. From that point on, Brooke manages the live catalog directly in
+Squarespace's own product admin — see `SHOP-MANAGEMENT-GUIDE.md` at the repo root — and this
+file does **not** get updated for her day-to-day adds/removals/hides. Squarespace's admin is
+the live source of truth for the catalog, not this table. This file only gets revisited if the
+remaining migration work below is resumed as a project task.
+
 Working source-of-truth for the shop catalog migration. See `SKILL.md` and
 `site-blueprint.md` Section 6 (Shop page) for the broader build context.
 

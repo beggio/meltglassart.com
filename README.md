@@ -62,6 +62,21 @@ live in Squarespace (applied). There's no Squarespace API to diff the repo again
 site, so this changelog is the *only* record of that distinction — don't skip it, drift
 between drafted and live is otherwise invisible until someone notices the hard way.
 
+## Shop catalog: Brooke manages this directly, not through this repo
+
+Day-to-day product changes — adding a new piece, removing one, hiding something that's sold
+out or seasonal — are **Brooke's own**, done directly in Squarespace's native product admin.
+No code, no Claude Code session, no pull request. See **`SHOP-MANAGEMENT-GUIDE.md`** at the
+repo root for the concrete how-to (with screenshots).
+
+This means `references/shop-inventory.md` is a **frozen baseline**, not a live mirror: it
+documents the initial 29-product migration from Square — what was ported, in what voice, and
+its status as of the migration — but it does **not** get updated for Brooke's day-to-day
+changes afterward. Squarespace's own admin is the live source of truth for the catalog from
+that point on. If the full migration (all 29 products) is ever resumed as a project task,
+that work still goes through this repo's normal workflow (above) and updates the inventory
+file; it's only *ongoing, independent* catalog edits by Brooke that fall outside it.
+
 ## What's deliberately excluded
 
 `.claude/skills/squarespace-site/private/` holds Squarespace login credentials and is
