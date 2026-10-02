@@ -190,3 +190,17 @@ migration and create the new shop page from the skill and template as a prototyp
 **Scope note**: 24 of 29 products remain — fully specified (name, category, price,
 description) in `shop-inventory.md`, but no photos saved and nothing built in Squarespace yet
 for those. Categories are already in place for all of them.
+
+## 2026-10-03 — "Unnamed product" with no price noted, excluded from catalog
+
+Per the client's report: Square's inventory has an entry showing as "Unnamed product" with no
+price set. Not visible anywhere in the public `/s/shop` storefront grid — confirmed by
+re-checking the full "All Items" view, still exactly the 29 named, priced products already in
+`shop-inventory.md`. This is presumably a draft/incomplete listing only visible in Square's
+admin, which this project has no access to (browsing has only ever been as a public visitor,
+per the migration's content-source decision).
+
+**Decision**: documented here as a build-log note only. Not added to `shop-inventory.md` or
+the 29-product migration count — an unnamed, unpriced entry isn't a real catalog item to
+migrate. If it turns out to represent a real product the client wants carried over, she'd need
+to give it a name and price in Square (or just describe it) for it to be added properly.
