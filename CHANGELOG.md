@@ -84,3 +84,37 @@ no plain copies left anywhere. The drift risk noted in the previous entry no lon
   explicit standing rule: this section must be updated in the same commit as any change to the
   skill's phases or the commit/review process — it's documented as a living doc, not a
   one-time write.
+
+## 2026-10-02 — Write-access test: custom.css applied live
+
+Requested test that Claude Code can actually write to the Squarespace platform (not just
+prepare content specs). Applied the already-finalized `assets/custom.css` into the live
+prototype's Custom CSS panel (Website → Pages → Custom Code → Custom CSS, found at
+`/config/pages/custom-css` — not under "Website → Styles" as SKILL.md's "Website Tools"
+wording suggested; SKILL.md should be corrected to match the actual 7.1 location next time
+it's touched).
+
+- Typing the CSS via the browser-automation `type` action triggered CodeMirror's
+  auto-close-brackets feature, duplicating a closing `}` for each of the 4 opening braces in
+  the file (4 stray `}` appended at the end, breaking the stylesheet). Caught via the editor's
+  own "Syntax error on line 49" indicator before saving; fixed by selecting from the intended
+  end of file to the document end and deleting the duplicates. **Note for future automated
+  edits to this (or any CodeMirror-based) Squarespace code panel: verify line count / check
+  for a trailing syntax-error indicator before saving, don't assume typed content landed
+  verbatim.**
+- After the fix, saved successfully (editor returned to non-dirty state, no error shown).
+- **Verified live**, not just saved: queried `getComputedStyle` on the actual rendered Home
+  page DOM inside the admin preview iframe — all 5 brand color tokens and the mobile
+  section-spacing token are present with the exact values written
+  (`--brand-primary:#3e7ab5`, `--brand-secondary:#e76d18`, `--brand-accent:#f37920`,
+  `--brand-bg:#faf3ec`, `--brand-text:#823038`, `--space-section-mobile:3rem`).
+- **One rule isn't visually effective**: `.sqs-block-button-element { border-radius: 0; }` is
+  present in the saved CSS but a higher-specificity or later-loading native Squarespace rule
+  still renders buttons at `border-radius: 300px` (pill-shaped). This is the exact risk the
+  file's own "FRAGILE ZONE" comment warns about for selectors like this — not a write failure,
+  but square-cornered buttons are **not yet actually achieved** and need a more specific
+  selector (or a native Squarespace button-shape setting) to actually take effect.
+
+**Net result: write access to Squarespace confirmed working.** `custom.css` is applied live
+for its 5 color tokens and the mobile spacing rule; the button-radius rule needs a follow-up
+fix to actually render square corners.
