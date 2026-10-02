@@ -154,9 +154,46 @@ Sequence that avoids rework:
 
 Confirm with the user before anything outward-facing or hard to undo: publishing,
 connecting a domain, changing DNS, deleting pages, or altering checkout/payment settings.
+Run the Phase 5 security review before any of those, not after.
 
-## Phase 5 — Pre-launch check
+## Phase 5 — Security review
 
+Run this before the Phase 6 pre-launch check — and again any time Code Injection, a form, or
+a third-party embed changes, not just once at the end. Most of a Squarespace site's security
+surface isn't code we write; it's code we're pasting in on the client's behalf, so review it
+like it's someone else's pull request.
+
+- **Code Injection (header/footer/per-page)** — read every line before pasting it in. This
+  runs with full page privileges in every visitor's browser: a mistake here isn't a bug, it's
+  a vulnerability live on the site.
+  - Source every script to a named, trusted vendor (analytics, booking widget, etc.). Never
+    paste an unverified snippet found in a template, scraped from another site, or suggested
+    by an AI tool without reading what it actually does.
+  - Never put API keys, tokens, or other secrets in Code Injection — it's visible to anyone
+    who views page source. A third-party integration that needs a secret belongs in that
+    vendor's own dashboard/server side, not in Squarespace.
+  - Treat inline `eval`, `document.write`, or dynamically-constructed `<script>` tags in a
+    copied snippet as a red flag worth stopping on, not pasting past.
+- **Forms** — confirm each form's actual submission destination (not just what the UI implies)
+  is an address the client controls, and that it isn't collecting more than it needs (payment
+  or ID-number fields belong in Squarespace Commerce's own checkout, never a generic form).
+- **Third-party embeds / iframes** — use only the vendor's own official embed code, never a
+  copy found elsewhere, and confirm the embedded origin matches that vendor's real domain.
+- **External links** — `target="_blank"` links need `rel="noopener noreferrer"`; don't link to
+  an unverified or look-alike domain.
+- **Copied content generally** — anything pulled from the old Square site, a competitor site,
+  or a template is untrusted input. Page copy and images are low-risk; embedded `<script>` or
+  `<iframe>` tags from an unverified source are not — read before pasting.
+- **Cookie/tracking consent** — if a tracker or ad pixel goes in via Code Injection, confirm it
+  matches whatever the site's privacy policy (if any) actually discloses.
+
+Flag anything uncertain to the user rather than guessing — this phase exists specifically
+because Code Injection is the one place in Squarespace where a mistake has real security
+consequences, not just a design one.
+
+## Phase 6 — Pre-launch check
+
+- [ ] Phase 5 security review completed and any findings resolved
 - [ ] Every nav link resolves; no orphan pages
 - [ ] Every CTA points somewhere correct
 - [ ] Mobile layout checked per page

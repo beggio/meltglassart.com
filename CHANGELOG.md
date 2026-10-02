@@ -68,3 +68,19 @@ symlink privilege to already-running processes just because the setting changed.
 global skill location (`~/.claude/skills/squarespace-site/`) is now **fully** link-based —
 `SKILL.md`, `assets/`, `references/`, `private/` all point back into this repo's clone with
 no plain copies left anywhere. The drift risk noted in the previous entry no longer applies.
+
+## 2026-10-02 — Security review added to the skill; README made the living workflow doc
+
+- `SKILL.md` — added a new **Phase 5 — Security review**, required before publishing anything
+  that touches Code Injection, forms, or third-party embeds, and re-run whenever those change
+  (not just once). Covers: verified script sources, no secrets in client-visible code, no
+  unverified `eval`/`document.write` in copied snippets, form submission-destination checks,
+  official embed code only, `rel="noopener noreferrer"` on external links, and tracking/cookie
+  consent matching. The former Phase 5 (Pre-launch check) is renumbered **Phase 6**, with a new
+  first checklist item requiring the Phase 5 review to be complete.
+- `README.md` — the three-bullet "Workflow" section is replaced with a full numbered procedure
+  covering editing/committing the skill content, applying a change live (Phase 4), the new
+  security review (Phase 5), the pre-launch check (Phase 6), and CHANGELOG logging. Adds an
+  explicit standing rule: this section must be updated in the same commit as any change to the
+  skill's phases or the commit/review process — it's documented as a living doc, not a
+  one-time write.
