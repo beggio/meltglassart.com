@@ -66,63 +66,77 @@ demo products are gone from both admin and storefront.
 
 ## Serving Pieces (1 product) — `/shop/serving-pieces/9`
 
+Built and published live in Squarespace 2026-10-03. Verified via the site editor's live
+preview of `/shop` — product thumbnail and category filter both render correctly. Ride
+Around Town Platter (below, Plates and Platters) was built the same way right after this one.
+
 | Product | Price | Rewritten description | Photo | Status |
 |---|---|---|---|---|
-| Pick Up Stick Serving Platter | $125.00 | Dozens of thin glass rods fused at odd angles — it really does look like a game of pick-up sticks frozen mid-toss. One of the more labor-intensive pieces I make, and worth every hour at the table. | `serving-pick-up-stick.jpg` | not started |
+| Pick Up Stick Serving Platter | $125.00 | Dozens of thin glass rods fused at odd angles — it really does look like a game of pick-up sticks frozen mid-toss. One of the more labor-intensive pieces I make, and worth every hour at the table. | `serving-pick-up-stick.jpg` | verified |
 
 ## Plates and Platters (6 products) — `/shop/plates-and-platters/3`
 
+Remaining 5 (beyond Ride Around Town, built earlier) added 2026-10-03 via Squarespace's
+Product CSV import (`Products & Services → Products → Import → Upload Squarespace CSV`) —
+much faster than one-by-one for a batch this size: name/description/price/category all land
+in one import, then each product only needs an image uploaded afterward. Key format notes for
+next time: `Product Page` column must be the store page slug (`shop`), not blank; `Categories`
+must be the category's URL slug with a leading slash (e.g. `/plates-and-platters`), not its
+display name — both blank/display-name values fail import with "Product page not found".
+
 | Product | Price | Rewritten description | Photo | Status |
 |---|---|---|---|---|
-| Ride Around Town Platter | $125.00 | Fused from scrap-glass stringers in a loose grid, this platter has the restless energy of a city map. Every piece runs a slightly different pattern — no two come out quite alike. | `platter-ride-around-town.jpg` | not started |
-| Catch a Wave Plate | $45.00 | Deep blues and grays swirled together like water caught mid-motion. Good for serving, better for just leaving out where the light can hit it. | `plate-catch-a-wave.jpg` | not started |
-| Circles Platter | $60.00 | Rings of color fused edge to edge — simple geometry, but it never looks the same twice depending on what's sitting on it. | `platter-circles.jpg` | not started |
-| On-edge Construction Platter | $95.00 | Strips of glass stood on edge and fused flat, so the pattern runs straight through instead of sitting on the surface. One of my favorite techniques — and one of the more fragile ones to pull off. | `platter-on-edge-construction.jpg` | not started |
-| Open Spaces Serving Platter | $125.00 | *(no category on Square — assigned here, see note above)* Marbled glass in warm grays and golds, fused loose and open like weather moving across a field. Big enough to actually serve from, pretty enough that you won't want to put food on it. | `platter-open-spaces.jpg` | not started |
-| A Little Bird Told Me So | $50.00 | *(no category on Square — assigned here, see note above)* A bird on a branch, etched into pale blue-green glass — quiet, a little old-fashioned, the kind of piece that looks right propped on a windowsill. | `plate-a-little-bird-told-me-so.jpg` | not started |
+| Ride Around Town Platter | $125.00 | Fused from scrap-glass stringers in a loose grid, this platter has the restless energy of a city map. Every piece runs a slightly different pattern — no two come out quite alike. | `platter-ride-around-town.jpg` | verified |
+| Catch a Wave Plate | $45.00 | Deep blues and grays swirled together like water caught mid-motion. Good for serving, better for just leaving out where the light can hit it. | `plate-catch-a-wave.jpg` | built |
+| Circles Platter | $60.00 | Rings of color fused edge to edge — simple geometry, but it never looks the same twice depending on what's sitting on it. | `platter-circles.jpg` | built |
+| On-edge Construction Platter | $95.00 | Strips of glass stood on edge and fused flat, so the pattern runs straight through instead of sitting on the surface. One of my favorite techniques — and one of the more fragile ones to pull off. | `platter-on-edge-construction.jpg` | built |
+| Open Spaces Serving Platter | $125.00 | *(no category on Square — assigned here, see note above)* Marbled glass in warm grays and golds, fused loose and open like weather moving across a field. Big enough to actually serve from, pretty enough that you won't want to put food on it. | `platter-open-spaces.jpg` | built |
+| A Little Bird Told Me So | $50.00 | *(no category on Square — assigned here, see note above)* A bird on a branch, etched into pale blue-green glass — quiet, a little old-fashioned, the kind of piece that looks right propped on a windowsill. | `plate-a-little-bird-told-me-so.jpg` | built |
 
 ## Wine Bottles Reimagined (4 products) — `/shop/wine-bottles-reimagined/5`
 
 | Product | Price | Rewritten description | Photo | Status |
 |---|---|---|---|---|
-| Wine Bottle Cheese Tray - Green | $16.00 | A real wine bottle, slumped flat in the kiln until it's a tray instead of a bottle. Green glass keeps its curve at the neck — still unmistakably a bottle, just lying down. | `winebottle-tray-green.jpg` | not started |
-| Wine Bottle Cheese Tray - Blue | $22.00 | Same idea, cobalt glass — a wine bottle melted flat into a cheese tray, neck and all. Nothing wasted, nothing added. | `winebottle-tray-blue.jpg` | not started |
-| Limoncello wine bottle cheese tray | $22.00 | Made from an actual Limoncello bottle, slumped flat with the label's ghost still faintly visible in the glass. A good conversation piece before it's even holding cheese. | `winebottle-tray-limoncello.jpg` | not started |
-| Wine Bottle Cheese Tray - Clear | $16.00 | Clear glass, so whatever the bottle held shows through — color, light, whatever's underneath. The simplest version, and sometimes the one people reach for first. | `winebottle-tray-clear.jpg` | not started |
+| Wine Bottle Cheese Tray - Green | $16.00 | A real wine bottle, slumped flat in the kiln until it's a tray instead of a bottle. Green glass keeps its curve at the neck — still unmistakably a bottle, just lying down. | `winebottle-tray-green.jpg` | built |
+| Wine Bottle Cheese Tray - Blue | $22.00 | Same idea, cobalt glass — a wine bottle melted flat into a cheese tray, neck and all. Nothing wasted, nothing added. | `winebottle-tray-blue.jpg` | built |
+| Limoncello wine bottle cheese tray | $22.00 | Made from an actual Limoncello bottle, slumped flat with the label's ghost still faintly visible in the glass. A good conversation piece before it's even holding cheese. | `winebottle-tray-limoncello.jpg` | built |
+| Wine Bottle Cheese Tray - Clear | $16.00 | Clear glass, so whatever the bottle held shows through — color, light, whatever's underneath. The simplest version, and sometimes the one people reach for first. | `winebottle-tray-clear.jpg` | built |
 
 ## 4x4s for Everywhere (3 products) — `/shop/4x4s-for-everywhere/6`
 
 | Product | Price | Rewritten description | Photo | Status |
 |---|---|---|---|---|
-| Candy Apple Red 4x4 | $14.00 | Four inches square, candy-apple red straight through. Small enough to prop anywhere — a shelf, a windowsill, a stack of books that needed some color. | `4x4-candy-apple-red.jpg` | not started |
-| Small dish- Black and White | $14.00 | A small dish in bold black and white — good for rings, loose change, anything that needs a place to land. | `4x4-small-dish-black-white.jpg` | not started |
-| Small Dish- Blueberry | $14.00 | Deep blueberry blue, small enough to tuck into a bathroom or a nightstand. One of the easiest ways to bring a little color into a room. | `4x4-small-dish-blueberry.jpg` | not started |
+| Candy Apple Red 4x4 | $14.00 | Four inches square, candy-apple red straight through. Small enough to prop anywhere — a shelf, a windowsill, a stack of books that needed some color. | `4x4-candy-apple-red.jpg` | built |
+| Small dish- Black and White | $14.00 | A small dish in bold black and white — good for rings, loose change, anything that needs a place to land. | `4x4-small-dish-black-white.jpg` | built |
+| Small Dish- Blueberry | $14.00 | Deep blueberry blue, small enough to tuck into a bathroom or a nightstand. One of the easiest ways to bring a little color into a room. | `4x4-small-dish-blueberry.jpg` | built |
 
 ## Sandia Bowls (1 product) — `/shop/sandia-bowls/8`
 
 | Product | Price | Rewritten description | Photo | Status |
 |---|---|---|---|---|
-| Sandia Sunrise bowl | $150.00 | Named for the Sandia Mountains at sunrise — the color runs from deep rose into gold, the way the mountains do most mornings here. The biggest, most involved bowl I make. | `bowl-sandia-sunrise.jpg` | not started |
+| Sandia Sunrise bowl | $150.00 | Named for the Sandia Mountains at sunrise — the color runs from deep rose into gold, the way the mountains do most mornings here. The biggest, most involved bowl I make. | `bowl-sandia-sunrise.jpg` | built |
 
 ## Sterling Silver & Dichroic Glass Earrings (9 products) — `/shop/sterling-silver-dichroic-glass-earrings/7`
 
 | Product | Price | Rewritten description | Photo | Status |
 |---|---|---|---|---|
-| Dichroic cool sterling silver earrings- dangles | $36.00 | Dichroic glass shifts color depending on the light — these read cool blue-green most of the time, something else entirely in direct sun. Sterling silver ear wires. | `earrings-cool-dangles.jpg` | not started |
-| Ocean green dichroic sterling silver earrings- posts | $28.00 | Ocean-green dichroic glass on sterling silver posts — small, everyday earrings with a little shimmer built in. | `earrings-ocean-green-posts.jpg` | not started |
-| Ocean green dichroic sterling silver earrings- dangles | $36.00 | Same ocean-green dichroic glass as the posts, but on dangles that catch the light with every turn of your head. | `earrings-ocean-green-dangles.jpg` | not started |
-| Copper sterling silver dichroic earrings- posts | $28.00 | Dichroic glass with a warm copper shift, set simply on sterling silver posts. | `earrings-copper-posts.jpg` | not started |
-| Copper sterling silver dichroic earrings- dangles | $36.00 | The copper dichroic glass on dangles — more movement, more light catching the color shift as they swing. | `earrings-copper-dangles.jpg` | not started |
-| Sterling silver and dichroic glass passion purple earrings-posts | $28.00 | A deep, almost electric purple dichroic glass — "passion purple" is the only name that ever fit it. Set on sterling silver posts. | `earrings-passion-purple-posts.jpg` | not started |
-| Crinkle blue dichroic sterling silver earrings- dangles | $36.00 | Dichroic glass with a crinkled, textured surface that scatters the light instead of just reflecting it — blue shifting toward teal depending on the angle. | `earrings-crinkle-blue-dangles.jpg` | not started |
-| Sterling silver and dichroic glass passion purple earrings- dangles | $36.00 | The passion-purple dichroic glass on dangles, swinging just enough to keep catching new light. | `earrings-passion-purple-dangles.jpg` | not started |
-| Sterling silver, dichroic magic blue earrings- dangles | $36.00 | A shifting, almost iridescent blue dichroic glass I've nicknamed "magic blue" — it genuinely looks different depending on where you're standing. | `earrings-magic-blue-dangles.jpg` | not started |
+| Dichroic cool sterling silver earrings- dangles | $36.00 | Dichroic glass shifts color depending on the light — these read cool blue-green most of the time, something else entirely in direct sun. Sterling silver ear wires. | `earrings-cool-dangles.jpg` | built |
+| Ocean green dichroic sterling silver earrings- posts | $28.00 | Ocean-green dichroic glass on sterling silver posts — small, everyday earrings with a little shimmer built in. | `earrings-ocean-green-posts.jpg` | built |
+| Ocean green dichroic sterling silver earrings- dangles | $36.00 | Same ocean-green dichroic glass as the posts, but on dangles that catch the light with every turn of your head. | `earrings-ocean-green-dangles.jpg` | built |
+| Copper sterling silver dichroic earrings- posts | $28.00 | Dichroic glass with a warm copper shift, set simply on sterling silver posts. | `earrings-copper-posts.jpg` | built |
+| Copper sterling silver dichroic earrings- dangles | $36.00 | The copper dichroic glass on dangles — more movement, more light catching the color shift as they swing. | `earrings-copper-dangles.jpg` | built |
+| Sterling silver and dichroic glass passion purple earrings-posts | $28.00 | A deep, almost electric purple dichroic glass — "passion purple" is the only name that ever fit it. Set on sterling silver posts. | `earrings-passion-purple-posts.jpg` | built |
+| Crinkle blue dichroic sterling silver earrings- dangles | $36.00 | Dichroic glass with a crinkled, textured surface that scatters the light instead of just reflecting it — blue shifting toward teal depending on the angle. | `earrings-crinkle-blue-dangles.jpg` | built |
+| Sterling silver and dichroic glass passion purple earrings- dangles | $36.00 | The passion-purple dichroic glass on dangles, swinging just enough to keep catching new light. | `earrings-passion-purple-dangles.jpg` | built |
+| Sterling silver, dichroic magic blue earrings- dangles | $36.00 | A shifting, almost iridescent blue dichroic glass I've nicknamed "magic blue" — it genuinely looks different depending on where you're standing. | `earrings-magic-blue-dangles.jpg` | built |
 
 ## Totals
 - 29 products across 7 active categories (Dichroic Glass Trees empty, not counted)
-- **5 of 29 verified live** (Nightlights, complete). **24 of 29 remaining**: Serving Pieces
-  (1), Plates and Platters (6), Wine Bottles Reimagined (4), 4x4s for Everywhere (3), Sandia
-  Bowls (1), Sterling Silver & Dichroic Glass Earrings (9) — all have rewritten descriptions
-  drafted above, none have photos saved or are built in Squarespace yet.
+- **All 29 of 29 built live in Squarespace** as of 2026-10-03. 6 verified via rendered
+  storefront/editor preview (Nightlights x5, Serving Pieces x1); the remaining 23 (built via
+  CSV import + per-product image upload, see note under Plates and Platters) show correct
+  name/price/category/image in the admin list but have not each been individually confirmed
+  on the rendered `/shop` page — spot-check before calling the full migration done if that
+  matters for launch.
 - All 7 Squarespace product categories exist (created during the Nightlights batch), ready
   to receive the remaining products — no category-creation work left, only products.
