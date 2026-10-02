@@ -118,3 +118,37 @@ it's touched).
 **Net result: write access to Squarespace confirmed working.** `custom.css` is applied live
 for its 5 color tokens and the mobile spacing rule; the button-radius rule needs a follow-up
 fix to actually render square corners.
+
+## 2026-10-02 — Button border-radius fixed; root cause documented
+
+Followed up on the prior entry's open finding (button radius saved but not visually
+effective). Investigated properly before guessing at a fix:
+
+- Tried to inspect which native Squarespace rule was winning via `document.styleSheets` /
+  `cssRules` from the page — every real theme stylesheet is served from
+  `assets.squarespace.com` / `sqspcdn.com`, cross-origin from the site's own domain, so
+  `cssRules` throws (`Cannot access rules`) on all of them. There's no way to read the actual
+  competing selector or specificity from the page — confirmed by testing, this isn't
+  speculation.
+- Fix: added `!important` to the button border-radius rule, and widened the selector list to
+  cover the actual classes observed on real buttons (`.sqs-block-button-element--small/medium
+  /large`, `.sqs-button-element--primary/secondary/tertiary`) rather than the single base
+  class alone.
+- Re-typed the full `custom.css` into the live Custom CSS panel (same CodeMirror
+  auto-close-brackets issue recurred — 4 stray trailing `}` for the file's 4 opening braces,
+  same fix as before: delete from intended end-of-file to actual document end, verify, then
+  save).
+- **Verified live**: `getComputedStyle` on the actual button element in the rendered DOM now
+  reports `border-radius: 0px` (previously `300px`). Fix confirmed working, not just saved.
+
+**Findings captured as durable platform knowledge, not just here:**
+- `references/platform-capabilities.md` — new note under "Fragility warning": Custom CSS
+  rules meant to override a native element style usually need `!important`, because the
+  compiled theme CSS is cross-origin and unreadable from the page; a saved, syntax-valid rule
+  can have zero visual effect with no error shown, so the live *computed* style must be
+  checked, not just "saved without error." Also corrected the Custom CSS panel's actual
+  location (`Website → Pages → Custom Code → Custom CSS`, not "Website Tools" as previously
+  written — verified live, not assumed).
+- `SKILL.md` Phase 3 — same two corrections (actual panel location; `!important` guidance and
+  the "verify computed style after saving" rule) added to the skill's own instructions, so
+  this isn't knowledge that only lives in a changelog entry.

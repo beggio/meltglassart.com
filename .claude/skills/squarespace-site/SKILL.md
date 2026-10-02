@@ -130,12 +130,21 @@ Define tokens once, then apply them everywhere:
 - Logo: assets/logo.jpg
 
 Put reusable CSS in `assets/custom.css` and paste it into
-`Website → Website Tools → Custom CSS`. Keep injection minimal and commented — every
-rule is something a future editor cannot see in the UI and will be confused by.
+`Website → Pages → Custom Code → Custom CSS` (verified live on 7.1, 2026-10-02 — not
+"Website Tools", which doesn't have a Custom CSS panel on this version). Keep injection
+minimal and commented — every rule is something a future editor cannot see in the UI and
+will be confused by.
 
 Before writing custom CSS, check whether a native Squarespace setting already does it.
 Native settings survive Squarespace updates; CSS selectors targeting generated class
 names do not.
+
+A rule meant to override a native element style (buttons, nav, built-in sections) usually
+needs `!important` to actually take effect — Squarespace's compiled theme CSS loads from a
+cross-origin CDN, so there's no reliable way to inspect its specificity from the page to beat
+it without `!important`. A saved, syntax-valid Custom CSS rule can have **zero visual
+effect** and give no error — always verify the live *computed* style after saving, don't
+trust that "saved without error" means "applied." See `references/platform-capabilities.md`.
 
 ## Phase 4 — Executing in the editor
 

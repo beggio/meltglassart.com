@@ -24,9 +24,23 @@
 
 /* --- Buttons -------------------------------------------------
    Reason: brand requires square corners; native style only
-   offers pill/rounded. Remove if Squarespace adds the option. */
-.sqs-block-button-element {
-  border-radius: 0;
+   offers pill/rounded. Remove if Squarespace adds the option.
+   !important is required here, not optional: Squarespace's compiled
+   theme CSS loads from assets.squarespace.com / sqspcdn.com, which is
+   cross-origin — we can't read its actual selectors or specificity
+   from the page to beat it on the cascade alone. Verified live
+   2026-10-02: without !important this rule was present in the saved
+   Custom CSS but had zero visual effect (computed border-radius still
+   300px, the native pill shape) — a plain-specificity version of this
+   rule does NOT work here, confirmed by testing, not assumed. */
+.sqs-block-button-element,
+.sqs-block-button-element--small,
+.sqs-block-button-element--medium,
+.sqs-block-button-element--large,
+.sqs-button-element--primary,
+.sqs-button-element--secondary,
+.sqs-button-element--tertiary {
+  border-radius: 0 !important;
 }
 
 /* --- Section rhythm ------------------------------------------
