@@ -152,3 +152,41 @@ effective). Investigated properly before guessing at a fix:
 - `SKILL.md` Phase 3 — same two corrections (actual panel location; `!important` guidance and
   the "verify computed style after saving" rule) added to the skill's own instructions, so
   this isn't knowledge that only lives in a changelog entry.
+
+## 2026-10-03 — Shop catalog migration started; Nightlights prototype live
+
+Began the shop catalog migration (the largest remaining content chunk in the project) and
+built a working end-to-end prototype, per the user's request to "start the shop catalog
+migration and create the new shop page from the skill and template as a prototype."
+
+- **Authoritative category data**: visited all 8 category pages on the live Square site
+  individually (not inferred from product names) to get exact per-category product lists.
+  Found Dichroic Glass Trees has 0 products currently. Found 2 products
+  ("A Little Bird Told Me So", "Open Spaces Serving Platter") have no category on Square at
+  all — assigned to Plates and Platters for the new catalog, flagged as a judgment call.
+- **`references/shop-inventory.md` created**: complete working source-of-truth for all 29
+  products — name, verified category, price, and a rewritten description in Melt's brand
+  voice (first-person as Brooke, per SKILL.md) for every item. Old Square descriptions were
+  sampled (2 products) rather than captured verbatim for all 29 — confirmed generic
+  AI-marketing boilerplate, being replaced not ported, so capturing all 29 was judged
+  low-value versus spending the effort on real rewrites.
+- **Squarespace Shop structure rebuilt**:
+  - Found 36 duplicate placeholder demo products in the admin (6 names × 6 copies each) —
+    more than the "6" assumed in the original migration plan, same duplication pattern as
+    the page stubs found earlier in the project. Confirmed with the user before bulk-deleting
+    all 36.
+  - Created all 7 active product categories in Squarespace (Nightlights, Serving Pieces,
+    Plates and Platters, Wine Bottles Reimagined, 4x4s for Everywhere, Sandia Bowls, Sterling
+    Silver & Dichroic Glass Earrings) — ready to receive the remaining 24 products.
+- **Nightlights category built as the full prototype** (5 of 29 products): saved real
+  product photos from the Square site via browser screenshot-capture (the only available
+  method — Square has no bulk export; ~199×199px, below the 2500px hero-image spec but fine
+  for shop thumbnails), uploaded each via Squarespace's file-upload flow, wrote real prices
+  and the rewritten descriptions, assigned the Nightlights category.
+- **Verified live**, not just saved: read the actual rendered `/shop` page — all 7 categories
+  appear as real filters, the 5 Nightlights products show with correct names/prices, and the
+  36 placeholder products are gone from both admin and storefront.
+
+**Scope note**: 24 of 29 products remain — fully specified (name, category, price,
+description) in `shop-inventory.md`, but no photos saved and nothing built in Squarespace yet
+for those. Categories are already in place for all of them.
