@@ -232,3 +232,54 @@ built) as a point-in-time record. Squarespace's own admin is the live source of 
 catalog going forward — this project does not try to resync the two. The remaining 24-product
 build-out is unaffected and can still be resumed as a project task if asked; only Brooke's
 independent day-to-day edits fall outside this file's scope now.
+
+## 2026-10-03 — Home, About, Contact, Barn & Banter built with real content
+
+Replaced Squarespace's default placeholder copy (Lorem ipsum, generic "next-generation art
+hub" AI-marketing text, stock photos of unrelated people) on all four remaining pages. Per
+the user's direction, content was pulled from the live old site (`www.meltglassart.com`,
+still on Square) rather than invented, with the skill's existing section layouts kept as-is.
+
+**Real content found on the old site and reused:**
+- Home hero tagline: "Fused glass is the way I communicate my soul. Thank you for visiting."
+  (old site's actual homepage copy).
+- About page: Brooke's full artist statement, verbatim from `/artistbio` on the old site
+  (first-person, her own words) — covers her process, influences, and that she lives and
+  works in Edgewood, New Mexico.
+- Real Facebook page: `facebook.com/Melt-A-glass-art-studio-192573367419544` — the only
+  social link that exists; no Instagram/Twitter found anywhere, so those placeholder links
+  were removed rather than left pointing nowhere.
+- A real photo of Brooke at the torch, captured from the old site's artist-bio hero banner
+  (screenshot crop, not a full-res source — flagged below) — saved to
+  `assets/brooke-studio-hero-clean.jpg` and `assets/brooke-studio-portrait.jpg`, reused
+  across Home, About, and Barn & Banter in place of Squarespace's stock photography.
+
+**No real source existed for, so deliberately left honest rather than fabricated:**
+- **Phone, street address, business hours** — the old site never published any of these
+  (just a contact form). Squarespace's default Contact/footer templates assume a phone
+  number and "Mon–Fri 10am–6pm" style hours; both were replaced with "No walk-in hours —
+  reach out through the contact form" and the one confirmed fact (Edgewood, New Mexico)
+  rather than inventing a schedule or number.
+- **Barn & Banter specifics** — the old site has no workshop content at all (it's a new
+  offering). Built as a single honest hero section only: what it is in one sentence, no
+  invented pricing, schedule, or "how it works" steps, with a note that details are still
+  coming together. The blueprint's fuller draft (3-step "how it works" grid, photo gallery)
+  was **not** built — there's nothing true to put in it yet. Needs real input from Brooke
+  before expanding.
+- **About page's inquiry form** ("Connect and Create with Us," retitled "Have a Question?")
+  — left in place and re-copied honestly rather than removed; the blueprint flagged this as
+  an open question (does an inquiry form belong on About, or Contact only?) still worth
+  settling with the client.
+
+**Known rough edges, flagged rather than silently shipped:**
+- The reused photo of Brooke is a browser screenshot crop of a small banner image on the old
+  site (~199–611px source), not a full-resolution original — visibly soft/low-res up close.
+  Real source photos from Brooke would look much better; same caveat already on record for
+  the Nightlights product photos.
+- Barn & Banter's hero section heading lost its large Heading-1 styling during a text edit
+  and renders smaller than the other pages' hero titles — cosmetic, not re-fixed due to an
+  editor quirk where re-selecting the block kept landing on the whole section instead of the
+  text. Worth a quick pass in the Squarespace editor directly.
+- None of these four pages have been re-verified against the live rendered site the way the
+  shop products were — each was checked via the editor's own preview after saving, not a
+  separate pass.
