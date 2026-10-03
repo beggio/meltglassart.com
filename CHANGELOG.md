@@ -317,3 +317,25 @@ against every page in this same session due to the Squarespace editor's scroll/n
 quirks (clicking a nav link while in page-edit mode selects the nav block instead of
 navigating, and mouse-wheel scroll is frequently a no-op). Worth a full footer sweep next
 session before publishing.
+
+## 2026-10-03 — Second texture-image removal: it was also on the Home page
+
+The previous entry's "About page texture image removed" fix was incomplete — the client
+caught a second placement of the same moodboard crop that the first pass missed: the Home
+page's main hero section had a swirled pink/orange/yellow image (`orangeglass.png`, a crop of
+`assets/textures.jpg`) sitting behind Brooke's portrait photo as a second, separate image
+block in the same section — not something that showed up when checking the About page alone.
+
+- Removed the `orangeglass.png` image block from the Home page hero. Brooke's portrait photo
+  (a separate, overlapping block in the same section) was confirmed intact immediately after
+  — an early attempt to delete the emptied block itself briefly removed the portrait too;
+  caught via preview and undone before saving, then redone correctly (content-only removal,
+  block left in place and empty).
+- Swept all five pages (Home, Shop, Barn & Banter, About, Contact) plus the global footer for
+  any other stray use of this texture crop. None found. Footer confirmed showing "Hazel Green,
+  Alabama," both Facebook and Instagram links (`instagram.com/meltstudionm/`), and the restored
+  logo — all still correct from the previous entry's fixes.
+- **Lesson for next time:** a styling-reference asset like `textures.jpg` can get reused as
+  literal content in more than one place during a build pass. When removing one instance,
+  check all pages that share a section layout or were built in the same pass, not just the
+  page the issue was reported on.
