@@ -10,6 +10,7 @@ Fill this in with the user before building. Approve the sitemap before writing c
 - Who clicks: browser agent
 - Deadline: 11/30/26
 - repo: https://github.com/beggio/meltglassart.com.git
+- assets/textures.jpg is a reference only and must be excluded as content everywhere on the site.
 
 ## 2. Goal
 - The **one** action a visitor should take: view products
