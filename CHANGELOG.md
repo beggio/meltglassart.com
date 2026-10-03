@@ -339,3 +339,25 @@ block in the same section — not something that showed up when checking the Abo
   literal content in more than one place during a build pass. When removing one instance,
   check all pages that share a section layout or were built in the same pass, not just the
   page the issue was reported on.
+
+## 2026-10-03 — Third texture-image removal: full textures.jpg in the Home page's Barn & Banter preview
+
+A third instance of the same asset, found by the client via a direct CDN link after the
+second fix above. This time it was the full, uncropped `textures.jpg` (not a crop like
+`orangeglass.png`), placed as a standalone image block in the Home page's "Barn & Banter"
+preview section (the teaser block below "Shop Fine Art," next to Brooke's portrait photo) —
+below where the previous sweep's manual scroll-through had stopped, which is why it was missed
+then.
+
+- Removed the `textures.jpg` image block from that section. It was a standalone block (no
+  other content layered on it), so it came out cleanly in one step — unlike the Home hero fix
+  above, there was no risk of also deleting Brooke's portrait, which is a separate block.
+- Verified via direct fetch of each live page's rendered HTML (`textures.jpg` string search)
+  rather than a manual editor scroll-through this time: Home, Shop, Barn & Banter, About, and
+  Contact all confirmed clean.
+- **Standing rule, now saved to persistent memory (not just this changelog):** `textures.jpg`
+  and any crop/derivative of it is a styling-reference asset only — palette and texture cues
+  for CSS/design decisions — and must never appear as rendered content on the live site, on
+  any page, permanently. Three separate instances turned up across two review passes, so this
+  is now checked by direct page-source search (`textures.jpg` string match) rather than relying
+  on a manual scroll-through, which has proven to miss instances below the fold.
