@@ -283,3 +283,37 @@ still on Square) rather than invented, with the skill's existing section layouts
 - None of these four pages have been re-verified against the live rendered site the way the
   shop products were — each was checked via the editor's own preview after saving, not a
   separate pass.
+
+## 2026-10-03 — Fixes from client review: location, socials, heading, shop hero image
+
+Client review of the previous entry's build caught several issues; all applied live in the
+Squarespace editor and verified via screenshot after each change.
+
+- **Location corrected.** "Edgewood, New Mexico" (the old site's stale location) replaced with
+  "Hazel Green, Alabama" everywhere it appeared: the global site footer, the Contact page's
+  Location sidebar block, and the About page's bio paragraph.
+- **Social links fixed.** Footer Facebook now links to
+  `facebook.com/Melt-A-glass-art-studio-192573367419544` (reliably — an earlier attempt
+  silently reverted to Squarespace's placeholder URL because the fix didn't press Enter to
+  commit the link edit; redone with Enter and reverified). Footer Instagram added, linking to
+  `instagram.com/meltstudionm` — this didn't exist before; the prior entry's claim that no
+  Instagram existed anywhere was about the old Square site, not a final answer.
+- **Barn & Banter heading fixed.** The hero "Barn & Banter" text block had lost its Heading 1
+  styling (flagged as a known rough edge in the previous entry) and was rendering as small
+  Paragraph 2 body text. Reset to Heading 1; now matches the large hero-title size used on
+  other pages.
+- **Shop page hero image replaced.** The generic Squarespace stock photo (unrelated person at
+  a pottery wheel) swapped for a real photo of Brooke's own work: the "Open Spaces" marbled
+  platter (`assets/shop/platter-open-spaces.jpg`).
+- **About page texture image removed.** `assets/textures.jpg` — a brand color/texture
+  moodboard meant only as a styling reference for palette/texture decisions — had been placed
+  as literal page content at the bottom of the About page's "Have a Question?" section in the
+  previous build. Removed; the file stays in `assets/` for its intended styling-reference use,
+  not as site content.
+
+**Not re-verified in this pass:** the footer's location and social-link fixes were spot-checked
+on the Contact, About, and Barn & Banter pages at the time each was made, but not re-confirmed
+against every page in this same session due to the Squarespace editor's scroll/navigation
+quirks (clicking a nav link while in page-edit mode selects the nav block instead of
+navigating, and mouse-wheel scroll is frequently a no-op). Worth a full footer sweep next
+session before publishing.
