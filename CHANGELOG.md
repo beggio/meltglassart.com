@@ -530,3 +530,21 @@ later.
 **Lesson:** before trusting an "Empty Page" or any other admin-panel state after a long gap
 mid-session, verify against the actual published HTML (fetch) rather than the editor's visual
 state — it can be stale or, as here, pointing at the wrong page entirely.
+
+## 2026-10-15 — Map layout: moved the map directly under the heading
+
+Client reported the map was visible on desktop (so the earlier "blank space" report was
+something else — likely a stale cache/extension on their end, not a build issue) but
+positioned wrong: it had landed in its own section below the body copy and button instead of
+right under the "Find Us" heading.
+
+**Applied live, both desktop and mobile:**
+- Removed the old Map block (which lived in its own section near the bottom of the page).
+- Added a new Map block directly into the intro section, in the empty space below the
+  heading, and resized/repositioned it so it sits immediately under "Find Us" with no overlap
+  — body copy and the "Share Your Spot" button now flow naturally below it.
+- Reconfigured it identically to before: geocoded to "Hazel Green, AL", zoom 0.01x (world
+  view).
+- Deleted the now-empty old section.
+- Checked independently in both Desktop View and Mobile View (Fluid Engine keeps these as
+  separate layouts) — confirmed correct in both before saving.

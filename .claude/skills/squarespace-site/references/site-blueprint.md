@@ -147,13 +147,14 @@ SEO description (<160): Workshop dates are still coming together. Reach out to b
 
 ## Map  (/map)
 Purpose: studio location now; grows into a collector map over time as real locations come in
-Section 1 — Intro: centered / "Find Us" / "Melt is based in Hazel Green, Alabama. We're
-building a map of where our pieces — and the people who collect them — call home. If you've
-got a piece of Melt glass, let us know where it landed." / "Share Your Spot" → /contact / —
-Section 2 — Map: native Squarespace Map block, geocoded to "Hazel Green, AL" (city-level only
-— no street address exists publicly, consistent with the "no walk-in hours" footer note).
-Zoom set to 0.01x (world view) per client request — shows all continents with Hazel Green as
-the only pin, meant to grow into a real collector map over time.
+Single section, one layout, no sub-sections — in order: "Find Us" heading / native Squarespace
+Map block, geocoded to "Hazel Green, AL" (city-level only — no street address exists publicly,
+consistent with the "no walk-in hours" footer note), zoom set to 0.01x (world view) per client
+request, placed immediately under the heading / body copy ("Melt is based in Hazel Green,
+Alabama. We're building a map of where our pieces — and the people who collect them — call
+home. If you've got a piece of Melt glass, let us know where it landed.") / "Share Your Spot"
+→ /contact. The map must stay directly under the heading, above the body copy, on both
+desktop and mobile (Fluid Engine keeps these as separate layouts — check both after any edit).
 SEO title (<60): Find Us | Melt Glass Art Studio
 SEO description (<160): Melt is based in Hazel Green, Alabama. See where our glass pieces and collectors call home.
 
