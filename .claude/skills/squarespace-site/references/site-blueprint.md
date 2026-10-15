@@ -13,6 +13,10 @@ Fill this in with the user before building. Approve the sitemap before writing c
 - assets/textures.jpg is a reference only and must be excluded as content everywhere on the site.
 - assets/images/brooke-studio-hero-clean.jpg (too tightly zoomed/cropped to use as a section
   image) was removed from the repo 2026-10-15 and must never be re-added or used on the site.
+- "Events (data source)" is a deliberately unlinked Events-collection page (Not Linked group)
+  with zero events, kept only so the Calendar page's Calendar block has a genuinely empty
+  source to point to. Do not add real events to it, delete it, or link it in nav — if it needs
+  real events someday, that's a separate decision, not an incidental edit.
 
 ## 2. Goal
 - The **one** action a visitor should take: view products
@@ -68,6 +72,12 @@ Mark each page's job. Keep top-level nav to 5-7 items.
 Verified against the live prototype (lute-bagpipe-ehkr.squarespace.com, password
 "MeltyCheese") on 2026-10-15 — Calendar and Map are now built (see Section 6) and the client
 set the final Main Navigation order directly in the Squarespace editor. Current actual order:
+
+Note: the Main Navigation "Map" entry is a **Link item** pointing to `/map`, not a direct page
+pick — a duplicate blank page got created under the same name during this build, got linked in
+nav by mistake, and was deleted; relinking the real page directly wasn't possible (page
+drag-reorder between the Main Navigation and Not Linked groups didn't respond to automation),
+so a Link item routing to `/map` was used instead. Functionally identical for visitors.
 
 ```
 /                    Home           — navigation to other pages, short summary of Melt, several images of work
@@ -127,6 +137,11 @@ Purpose: honest placeholder until real workshop/event dates exist — no fabrica
 Section 1 — Intro: centered / "Calendar" / "Workshop and event dates are still coming
 together. Want to be the first to know when something's on the calendar? Get in touch
 below." / "Get in Touch" → /contact / —
+Section 2 — Calendar: native Squarespace Calendar block, always showing the current month with
+prev/next navigation. Connected to an empty, unlinked Events collection ("Events (data
+source)" — see Section 1 note) rather than left unconnected, since an unconnected Calendar
+block falls back to showing Squarespace's own fake demo events on the live site, not a blank
+state. Never connect this block to Shop/products — it would show real products as "events."
 SEO title (<60): Calendar | Melt Glass Art Studio
 SEO description (<160): Workshop dates are still coming together. Reach out to be the first to know when something's on the calendar.
 
@@ -136,7 +151,9 @@ Section 1 — Intro: centered / "Find Us" / "Melt is based in Hazel Green, Alaba
 building a map of where our pieces — and the people who collect them — call home. If you've
 got a piece of Melt glass, let us know where it landed." / "Share Your Spot" → /contact / —
 Section 2 — Map: native Squarespace Map block, geocoded to "Hazel Green, AL" (city-level only
-— no street address exists publicly, consistent with the "no walk-in hours" footer note)
+— no street address exists publicly, consistent with the "no walk-in hours" footer note).
+Zoom set to 0.01x (world view) per client request — shows all continents with Hazel Green as
+the only pin, meant to grow into a real collector map over time.
 SEO title (<60): Find Us | Melt Glass Art Studio
 SEO description (<160): Melt is based in Hazel Green, Alabama. See where our glass pieces and collectors call home.
 

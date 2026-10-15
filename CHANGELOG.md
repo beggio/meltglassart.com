@@ -492,3 +492,41 @@ vague to build without asking what it should actually be.
 reflects the live nav, Barn & Banter's stale "EMPTY" status note removed (it's been built for
 a while), and Calendar/Map's "NOT BUILT" placeholders replaced with their actual shipped
 content specs.
+
+## 2026-10-15 — Real calendar grid, world-view map, and a duplicate-page recovery
+
+Follow-up to the entry above: client asked for the Calendar page to show an actual empty
+calendar of the current month (not just text) with month-to-month navigation, and the Map
+page's map to be a zoomed-out world view with Hazel Green, AL as the only pin, matching the
+original sitemap intent.
+
+**Calendar — applied live:**
+- Added Squarespace's native Calendar block (always shows the current month, with prev/next
+  arrows — confirmed this is a platform feature, not something built here).
+- The block's default/unconnected state renders Squarespace's own fake demo events live on the
+  site (confirmed via both a server-side HTML fetch and the editor's own Preview mode, which
+  showed the fake events even though they don't appear in page source — the block is
+  client-rendered). Connecting it to the Shop/products collection was considered and rejected:
+  that would show real products as fake "events."
+- Fix: created a new, deliberately unlinked Events-collection page, "Events (data source)"
+  (Not Linked group), deleted its 5 auto-generated demo events, and pointed the Calendar
+  block at it. Result: a genuinely empty grid for the current month.
+
+**Map — applied live:**
+- Zoomed the native Map block out to 0.01x, which renders a full world view (all continents
+  visible) with the Hazel Green, AL pin as the only marker, per the original sitemap
+  ("customer map corkboard" → literal interactive map, starting with just the studio pin).
+
+**Incident — duplicate Map page:** mid-session, a second blank page also named "Map" was found
+linked in Main Navigation, shadowing the real content page (which still held everything built
+2026-10-15 earlier, confirmed intact via direct HTML fetch). Likely created accidentally while
+adding the Calendar's data-source page. Fixed by deleting the blank duplicate and adding a
+Main Navigation **Link item** pointing to `/map`, since dragging the real page from "Not
+Linked" into "Main Navigation" didn't respond to browser-automation input (same limitation as
+the earlier nav-reorder issue — see the 2026-10-15 "still on the Home page" entry above).
+Functionally identical for visitors; flagged in the blueprint so this isn't mistaken for a bug
+later.
+
+**Lesson:** before trusting an "Empty Page" or any other admin-panel state after a long gap
+mid-session, verify against the actual published HTML (fetch) rather than the editor's visual
+state — it can be stale or, as here, pointing at the wrong page entirely.
