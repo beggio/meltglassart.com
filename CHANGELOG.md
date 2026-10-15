@@ -411,3 +411,27 @@ the repo entirely.
 - `assets/images/brooke-studio-hero-clean.jpg` removed (`git rm`).
 - `references/site-blueprint.md` Section 1 updated with a standing exclusion, mirroring the
   `textures.jpg` rule: this file must never be re-added or used on the site.
+
+## 2026-10-15 — Same over-zoomed image was live on three more pages
+
+Client reported the just-removed image was still showing on the Barn & Banter page. A full
+sweep (not just a spot-fix — see the `textures.jpg` lesson from 2026-10-03) turned up the same
+photo in **four** places total, not one: it had been uploaded to Squarespace's media library
+multiple times under reused filenames (`brooke-studio-portrait.jpg` in Squarespace's own
+library is not one file — at least two separate uploads share that label), so removing the
+repo source file didn't touch any of the copies already placed on live pages.
+
+**Applied live, all on `lute-bagpipe-ehkr.squarespace.com`:**
+- Barn & Banter — hero image block replaced with `468840146_...jpg` (glass Zia-symbol tiles
+  in progress — fits a hands-on-workshop page).
+- About page — **two** separate instances, both missed in the earlier pass:
+  - Hero section background (behind "Breathe. Strength. Nature.") replaced with the same
+    market-booth photo of Brooke used on Home's About section (`468787199_...jpg`).
+  - "In the Studio" image block replaced with the studio work-in-progress bench shot
+    (`87480861_...jpg`) — matches that section's own heading.
+- Verified clean via full scroll-through of Contact and Shop (no instance found on either).
+
+**Process note:** checked every page by eye this time, not just by filename — Squarespace's
+displayed "filename" for an asset is just a label, not a unique identifier, so two visually
+different images (or two copies of the same one) can carry the same name in its library.
+Filename alone is not reliable evidence that an image is or isn't the retired photo.
