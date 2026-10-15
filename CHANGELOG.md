@@ -393,3 +393,21 @@ show "photo of Brooke" instead of a generic "studio photo."
 2026-10-15) is, despite its filename, a photo of a market display table — not a portrait of
 Brooke. The actual portrait is `assets/images/brooke-studio-hero-clean.jpg`. Flagged for a
 filename fix; not renamed in this pass to avoid touching files mid-review.
+
+## 2026-10-15 — About the artist image replaced; zoomed-in portrait retired
+
+The "About the artist" section's image (`brooke-studio-hero-clean.jpg`) was too tightly
+zoomed/cropped to read well as a section image — it was the same close-up used in the Home
+hero before the previous entry's swap. Client asked for it to be replaced and removed from
+the repo entirely.
+
+**Applied live** (`lute-bagpipe-ehkr.squarespace.com`, Home page):
+- "About the artist" section image replaced with `468787199_...jpg` — a market-booth photo
+  showing Brooke clearly at the Melt table — the only remaining new photo with a clear,
+  unambiguous shot of her face.
+- Verified live via the page editor's published preview.
+
+**Repo:**
+- `assets/images/brooke-studio-hero-clean.jpg` removed (`git rm`).
+- `references/site-blueprint.md` Section 1 updated with a standing exclusion, mirroring the
+  `textures.jpg` rule: this file must never be re-added or used on the site.

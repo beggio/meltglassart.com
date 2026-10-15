@@ -11,6 +11,8 @@ Fill this in with the user before building. Approve the sitemap before writing c
 - Deadline: 11/30/26
 - repo: https://github.com/beggio/meltglassart.com.git
 - assets/textures.jpg is a reference only and must be excluded as content everywhere on the site.
+- assets/images/brooke-studio-hero-clean.jpg (too tightly zoomed/cropped to use as a section
+  image) was removed from the repo 2026-10-15 and must never be re-added or used on the site.
 
 ## 2. Goal
 - The **one** action a visitor should take: view products
@@ -99,7 +101,7 @@ invent new section shapes unless a page's purpose genuinely needs one.
 ## Home  (/)
 Purpose: navigation to other pages, short summary of Melt, several images of work
 Section 1 — Hero: image-left / text-right + full-bleed title / "MELT: A GLASS ART STUDIO" / placeholder subhead ("The fusion of glass, heat, and passion") / — / image of work in studio 
-Section 2 — About the artist: split, dark bg / "About the artist" / placeholder bio teaser ("Born at the crossroads of curiosity and code...") / "More About Brooke" → /about / photo of Brooke
+Section 2 — About the artist: split, dark bg / "About the artist" / placeholder bio teaser ("Born at the crossroads of curiosity and code...") / "More About Brooke" → /about / photo of artist with work
 Section 3 — Shop Fine Art: 4-up product grid / "Shop Fine Art" / — / "Shop All" → /shop / 4 placeholder products ($25 each)
 Section 4 — Barn & Banter teaser: 3-up card grid / "Barn & Banter" / 3 placeholder blurbs / "Get Started" → /barn-banter / placeholder cards
 SEO title (<60):
