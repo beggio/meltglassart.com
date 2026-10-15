@@ -98,8 +98,8 @@ invent new section shapes unless a page's purpose genuinely needs one.
 ```
 ## Home  (/)
 Purpose: navigation to other pages, short summary of Melt, several images of work
-Section 1 — Hero: image-left / text-right + full-bleed title / "MELT: A GLASS ART STUDIO" / placeholder subhead ("Lorem ipsum dolor sit amet...") / — / studio photo of Brooke
-Section 2 — About the artist: split, dark bg / "About the artist" / placeholder bio teaser ("Born at the crossroads of curiosity and code...") / "More About Brooke" → /about / studio photo
+Section 1 — Hero: image-left / text-right + full-bleed title / "MELT: A GLASS ART STUDIO" / placeholder subhead ("The fusion of glass, heat, and passion") / — / image of work in studio 
+Section 2 — About the artist: split, dark bg / "About the artist" / placeholder bio teaser ("Born at the crossroads of curiosity and code...") / "More About Brooke" → /about / photo of Brooke
 Section 3 — Shop Fine Art: 4-up product grid / "Shop Fine Art" / — / "Shop All" → /shop / 4 placeholder products ($25 each)
 Section 4 — Barn & Banter teaser: 3-up card grid / "Barn & Banter" / 3 placeholder blurbs / "Get Started" → /barn-banter / placeholder cards
 SEO title (<60):
@@ -145,6 +145,7 @@ SEO description (<160):
 Purpose: bio of artist, history of work and practice
 Section 1 — Hero: split / "Art in Motion: Shaping Tomorrow's Creativity" (placeholder — needs Brooke/Melt-specific headline) / "Pioneering the Future of Art" placeholder body / "Learn More" / —
 Section 2 — Connect and Create with Us: form / — / inquiry form (First/Last Name, Email, Phone, Project Details) / "Submit" / — <!-- FILL: confirm with Brooke whether an inquiry form belongs on About, or should move to Contact only -->
+Section 3 - Experience my work in action - links to working videos contained in assets directory
 SEO title (<60):
 SEO description (<160):
 
