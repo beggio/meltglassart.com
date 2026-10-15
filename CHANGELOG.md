@@ -361,3 +361,35 @@ then.
   any page, permanently. Three separate instances turned up across two review passes, so this
   is now checked by direct page-source search (`textures.jpg` string match) rather than relying
   on a manual scroll-through, which has proven to miss instances below the fold.
+
+## 2026-10-15 — Home hero swapped to a studio work photo; new photo library added
+
+Brooke added a batch of real photos (market booth shots, product shots, and one genuine
+studio work-in-progress shot) to a new `assets/images/` folder, reorganized `assets/` into
+`images/` and `logo/` subfolders, and updated `site-blueprint.md`'s Home page spec: the Hero
+should show "image of work in studio" instead of a portrait, and "About the artist" should
+show "photo of Brooke" instead of a generic "studio photo."
+
+**Applied live** (`lute-bagpipe-ehkr.squarespace.com`, Home page):
+- Hero image replaced with `87480861_...jpg` — a genuine studio work-in-progress shot (glass
+  cutter, ruler, a piece being laid out on the bench). The previous Hero image was actually
+  Brooke's portrait, mislabeled in spec as generic "studio photo"; moving it out of the Hero
+  matches the blueprint's new "image of work in studio" instruction.
+- Hero subhead copy replaced: "Fused glass is the way I communicate my soul. Thank you for
+  visiting." → "The fusion of glass, heat, and passion" (per the blueprint edit).
+- "About the artist" section: no change needed — it already used the real Brooke portrait
+  (`brooke-studio-portrait.jpg` in Squarespace's library), which already satisfies the
+  blueprint's "photo of Brooke" instruction.
+- Verified live via the page editor's published preview (not just Save confirmation).
+
+**Not applied — blocked:**
+- About page Section 3, "Experience my work in action - links to working videos contained in
+  assets directory" (added to the blueprint this round) — the video files it refers to were
+  removed from the repo in the 2026-10-13 size-limit revert (see git history) and no longer
+  exist anywhere in `assets/`. Needs real video assets (hosted outside this repo, given
+  GitHub's size limits) before this section can be built.
+
+**Data-quality note:** the newly added `assets/images/brooke-studio-portrait.jpg` (added
+2026-10-15) is, despite its filename, a photo of a market display table — not a portrait of
+Brooke. The actual portrait is `assets/images/brooke-studio-hero-clean.jpg`. Flagged for a
+filename fix; not renamed in this pass to avoid touching files mid-review.
