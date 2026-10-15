@@ -66,18 +66,16 @@ Fill this in with the user before building. Approve the sitemap before writing c
 Mark each page's job. Keep top-level nav to 5-7 items.
 
 Verified against the live prototype (lute-bagpipe-ehkr.squarespace.com, password
-"MeltyCheese") on 2026-09-30 — Home/Shop/Barn & Banter/About/Contact are the actual Main
-Navigation and page order already built in Squarespace. Calendar and Map from the earlier
-draft do **not** exist on the prototype yet (no such pages, linked or unlinked) — kept here
-as planned/not-yet-built pages rather than dropped; still need to be created.
+"MeltyCheese") on 2026-10-15 — Calendar and Map are now built (see Section 6) and the client
+set the final Main Navigation order directly in the Squarespace editor. Current actual order:
 
 ```
 /                    Home           — navigation to other pages, short summary of Melt, several images of work
-/shop                Shop           — listing of all products available for sale
-/barn-banter         Barn & Banter  — client based creative workshops (linked in nav, page is empty — no sections built yet)
-/calendar            Calendar       — Barn & Banter events (not yet built on the prototype)
-/map                 Map            — customer map corkboard (not yet built on the prototype)
 /about               About          — bio of artist, history of work and practice
+/calendar            Calendar       — honest "coming soon" page; no fake events, links to Contact
+/barn-banter         Barn & Banter  — client based creative workshops
+/shop                Shop           — listing of all products available for sale
+/map                 Map            — studio location (Hazel Green, AL) + invitation for collectors to share theirs
 /contact             Contact        — contact information for artist, links to social network pages
 ```
 
@@ -118,30 +116,29 @@ SEO description (<160):
 
 ## Barn & Banter  (/barn-banter)
 Purpose: client based creative workshops
-Status: EMPTY on the prototype — linked in nav but zero sections built ("Create a
-beautiful page by adding and combining sections."). Needs the full build from scratch;
-carrying forward the original draft shape below as the starting point, pending approval:
-Section 1 — Hero: split-L / "Barn & Banter" / short workshop pitch / "Book a session" → <!-- FILL: booking destination — Acuity link? Contact? --> / workshop photo
-Section 2 — What to expect: grid-3 / "How it works" / 3 short steps / — / 3 icons
-Section 3 — Gallery: carousel / — / — / — / past workshop photos
+Section 1 — Hero: split / "Barn & Banter" / "Hands-on creative workshops with Brooke, hosted
+right in the studio. Details and dates are still coming together — reach out if you'd like to
+hear when they're set." / "Get In Touch" → /contact / studio work-in-progress photo
 SEO title (<60):
 SEO description (<160):
 
 ## Calendar  (/calendar)
-Purpose: display calendar of events for 12 months
-Status: NOT BUILT on the prototype — no /calendar page exists yet, linked or unlinked.
-Section 1 — <name>: Hero:
-Section 2 — <name>:
-SEO title (<60):
-SEO description (<160):
+Purpose: honest placeholder until real workshop/event dates exist — no fabricated events
+Section 1 — Intro: centered / "Calendar" / "Workshop and event dates are still coming
+together. Want to be the first to know when something's on the calendar? Get in touch
+below." / "Get in Touch" → /contact / —
+SEO title (<60): Calendar | Melt Glass Art Studio
+SEO description (<160): Workshop dates are still coming together. Reach out to be the first to know when something's on the calendar.
 
 ## Map  (/map)
-Purpose: customer map corkboard
-Status: NOT BUILT on the prototype — no /map page exists yet, linked or unlinked.
-Section 1 — <name>:  layout / headline / body / CTA / image
-Section 2 — <name>:  ...
-SEO title (<60):
-SEO description (<160):
+Purpose: studio location now; grows into a collector map over time as real locations come in
+Section 1 — Intro: centered / "Find Us" / "Melt is based in Hazel Green, Alabama. We're
+building a map of where our pieces — and the people who collect them — call home. If you've
+got a piece of Melt glass, let us know where it landed." / "Share Your Spot" → /contact / —
+Section 2 — Map: native Squarespace Map block, geocoded to "Hazel Green, AL" (city-level only
+— no street address exists publicly, consistent with the "no walk-in hours" footer note)
+SEO title (<60): Find Us | Melt Glass Art Studio
+SEO description (<160): Melt is based in Hazel Green, Alabama. See where our glass pieces and collectors call home.
 
 ## About  (/about)
 Purpose: bio of artist, history of work and practice

@@ -460,3 +460,35 @@ sweep has to check *every section of every page*, not stop at the sections alrea
 have held content before (Hero, About). When a project's own history already names a specific
 section as a past hiding spot for a stale asset (see the 2026-10-03 entry), check that named
 section explicitly on the next sweep rather than re-discovering it by a third report.
+
+## 2026-10-15 — Calendar and Map pages built; sitemap finalized
+
+The two remaining planned-but-unbuilt pages from the original sitemap draft. Scoped with the
+client first rather than guessing: Barn & Banter already says workshop dates aren't set yet,
+so Calendar needed to stay honest (no invented events), and "customer map corkboard" was too
+vague to build without asking what it should actually be.
+
+**Decisions (client-confirmed):**
+- Calendar: a simple "coming soon" page in Barn & Banter's own honest tone — no fake dates,
+  links to Contact. Revisit once real workshop dates exist.
+- Map: a literal interactive map. Starts with just the studio's own pin (Hazel Green, AL,
+  city-level only — no street address exists publicly); no customer locations invented. Uses
+  Squarespace's native Map block, so no third-party account or API key is needed. Real
+  collector pins can be added later as that data comes in.
+
+**Applied live** (`lute-bagpipe-ehkr.squarespace.com`):
+- `/calendar` — built: "Calendar" heading, honest body copy, "Get in Touch" → /contact. SEO
+  title/description set.
+- `/map` — built: "Find Us" intro section with body copy, "Share Your Spot" → /contact, plus a
+  native Google Map block geocoded to "Hazel Green, AL" (confirmed via the block's address
+  autocomplete — typing into the City/State field alone did not trigger geocoding; the
+  Address field's autocomplete selection did). SEO title/description set.
+- Main Navigation reordered by the client directly in the Squarespace editor (drag-and-drop
+  reordering did not respond to browser-automation input — flagged and left for the client
+  rather than fought further). Final live order: Home, About, Calendar, Barn & Banter, Shop,
+  Map, Contact.
+
+**Repo:** `references/site-blueprint.md` Sections 5 and 6 updated to match: sitemap order now
+reflects the live nav, Barn & Banter's stale "EMPTY" status note removed (it's been built for
+a while), and Calendar/Map's "NOT BUILT" placeholders replaced with their actual shipped
+content specs.
