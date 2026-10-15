@@ -435,3 +435,28 @@ repo source file didn't touch any of the copies already placed on live pages.
 displayed "filename" for an asset is just a label, not a unique identifier, so two visually
 different images (or two copies of the same one) can carry the same name in its library.
 Filename alone is not reliable evidence that an image is or isn't the retired photo.
+
+## 2026-10-15 — Still on the Home page: the Barn & Banter teaser section was missed
+
+Client reported the photo was *still* live, specifically on "the Barn & Banter section of the
+Home page." A server-side fetch check (searching rendered HTML for `hero-clean` across all 5
+routes) had come back clean, which was true for the four spots already fixed — but missed a
+**fifth** placement: the same image was also the card photo in the Home page's own "Barn &
+Banter" teaser section (the 3-up section below "Shop Fine Art"), a page section distinct from
+the actual `/barn-banter` page. This exact section was already called out by name in the
+2026-10-03 textures.jpg entry above as a previous hiding spot for a retired image — it should
+have been checked automatically this time without being told twice.
+
+**Applied live** (`lute-bagpipe-ehkr.squarespace.com`, Home page):
+- Barn & Banter teaser section image replaced with `IMG_1504.jpeg` — a new photo of the actual
+  barn/studio exterior, added uncommitted to the repo by the client for this purpose.
+- Re-verified via the same server-side fetch check used earlier, across all 5 routes: `0`
+  matches for `hero-clean` and `0` for `brooke-studio-portrait` this time.
+
+**Repo:** `assets/images/IMG_1504.jpeg` added and committed.
+
+**Lesson:** a page can host the same image in more than one distinct section, and a general
+sweep has to check *every section of every page*, not stop at the sections already known to
+have held content before (Hero, About). When a project's own history already names a specific
+section as a past hiding spot for a stale asset (see the 2026-10-03 entry), check that named
+section explicitly on the next sweep rather than re-discovering it by a third report.
