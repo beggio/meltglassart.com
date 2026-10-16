@@ -548,3 +548,32 @@ right under the "Find Us" heading.
 - Deleted the now-empty old section.
 - Checked independently in both Desktop View and Mobile View (Fluid Engine keeps these as
   separate layouts) — confirmed correct in both before saving.
+
+## 2026-10-16 — Calendar layout: moved the calendar directly under the heading
+
+Follow-up to the Map layout fix above: client asked for the same treatment on the Calendar
+page — the Calendar block should follow directly under the "Calendar" heading and be
+centered, matching the Map-page pattern.
+
+**Applied live, both desktop and mobile:**
+- Repositioned the Calendar block so it sits immediately under the "Calendar" heading
+  (previously there was a large vertical gap) and centered it horizontally (previously
+  offset ~46px left of center).
+- In the process of earlier troubleshooting this session, the pre-existing body-copy text
+  block ("Workshop and event dates are still coming together...") had been deleted and the
+  Calendar block's data source had become disconnected from "Events (data source)" (it was
+  rendering Squarespace's fake demo events — stock photos and "Porta"/"Pellentesque Risus
+  Ridiculus" lorem text — again in the editor canvas). Both were fixed: reconnected the block
+  to "Events (data source)", and re-added the body-copy text block with its original copy.
+- Could not get the body-copy block to drag-reposition between the calendar and the "Get in
+  Touch" button (same block-drag resistance as prior sessions) — landed it below the button
+  instead, so the live order is now heading → calendar → button → body copy, not matching the
+  blueprint's original heading → calendar → body copy → button order. Functionally complete,
+  not a layout bug, but flagged here since it diverges from spec.
+- Checked independently in both Desktop View and Mobile View — confirmed no overlap and no
+  stray demo-event content in either, and reconfirmed via an authenticated fetch of the live
+  `/calendar` HTML that no "Porta"/"Pellentesque" text is present before saving.
+
+**Lesson:** a Calendar block's data-source connection can get silently reset by heavy
+drag/undo churn during layout troubleshooting — re-check Content → Events: Stacked source
+after any extended fight with a page's layout, not just the thing being visibly moved.

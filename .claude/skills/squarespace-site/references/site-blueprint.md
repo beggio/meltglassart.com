@@ -134,14 +134,21 @@ SEO description (<160):
 
 ## Calendar  (/calendar)
 Purpose: honest placeholder until real workshop/event dates exist — no fabricated events
-Section 1 — Intro: centered / "Calendar" / "Workshop and event dates are still coming
-together. Want to be the first to know when something's on the calendar? Get in touch
-below." / "Get in Touch" → /contact / —
-Section 2 — Calendar: native Squarespace Calendar block, always showing the current month with
-prev/next navigation. Connected to an empty, unlinked Events collection ("Events (data
+Single section, in order: "Calendar" heading, centered / native Squarespace Calendar block
+(always shows the current month with prev/next navigation), positioned immediately under the
+heading and centered horizontally / "Get in Touch" → /contact / body copy ("Workshop and
+event dates are still coming together. Want to be the first to know when something's on the
+calendar? Get in touch below."). Note: body copy currently sits *below* the button rather
+than above it (blueprint originally called for heading → calendar → body copy → button) — a
+block-drag limitation in the editor during the 2026-10-16 layout fix meant the body-copy
+block could only be landed below the button, not between the calendar and it. Functionally
+complete; revisit if the editor's drag behavior improves.
+Calendar block connected to an empty, unlinked Events collection ("Events (data
 source)" — see Section 1 note) rather than left unconnected, since an unconnected Calendar
 block falls back to showing Squarespace's own fake demo events on the live site, not a blank
 state. Never connect this block to Shop/products — it would show real products as "events."
+This connection can silently reset during heavy layout editing — re-verify it (Content →
+Events: Stacked) after any extended drag/undo troubleshooting on this page.
 SEO title (<60): Calendar | Melt Glass Art Studio
 SEO description (<160): Workshop dates are still coming together. Reach out to be the first to know when something's on the calendar.
 
