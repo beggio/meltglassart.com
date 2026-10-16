@@ -577,3 +577,23 @@ centered, matching the Map-page pattern.
 **Lesson:** a Calendar block's data-source connection can get silently reset by heavy
 drag/undo churn during layout troubleshooting — re-check Content → Events: Stacked source
 after any extended fight with a page's layout, not just the thing being visibly moved.
+
+## 2026-10-16 — Footer logo replaced with the real brand mark
+
+Client reported the logo image next to the "Follow" social links in the site footer needed
+to be removed and replaced with the actual logo file from the repo.
+
+**Applied live (global site footer, so this affects every page):**
+- The footer's image block held an old placeholder logo (`logo.jpg` — "Melt" script text on a
+  solid beige square, not the real brand mark).
+- Replaced it with `Melt_logo-RGB.png` from
+  `.claude/skills/squarespace-site/assets/` (transparent background, brand orange/blue —
+  matches `references/site-blueprint.md` Section 4's logo spec) via the block's Content →
+  Replace → Upload file flow.
+- The image block's display mode was set to "Fill", which cropped the new logo's tagline
+  ("a glass art studio") off its right edge since the new image's aspect ratio differs from
+  the old square placeholder's. Switched the block to "Fit" so the full logo displays
+  uncropped.
+- Checked independently in both Desktop View and Mobile View, then confirmed live via an
+  authenticated fetch of the Home page HTML (`logo.jpg` absent, `Melt_logo-RGB` present)
+  before considering this done.

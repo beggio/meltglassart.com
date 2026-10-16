@@ -29,7 +29,9 @@ Fill this in with the user before building. Approve the sitemap before writing c
 - What objection must be answered before they act: will it break? is it food safe?
 
 ## 4. Brand
-- Logo file: assets/logo.jpg
+- Logo file: `.claude/skills/squarespace-site/assets/Melt_logo-RGB.png` (transparent
+  background; also available as `.svg` and as a square-crop `.jpg` in `assets/logo/`). Applied
+  live in the site-wide footer 2026-10-16, replacing an old placeholder (`logo.jpg`).
 ## - Palette: primary `#` / secondary `#` / accent `#` / bg `#` / text `#`
 - Palette: 
     - Logo:
@@ -185,6 +187,12 @@ SEO description (<160):
 Find Us: placeholder address "123 Example Road, New York, NY 12345" <!-- FILL: real address or "by appointment" -->
 Hours: placeholder Mon–Fri 10am–6pm
 Follow: placeholder Facebook/Instagram/Twitter links <!-- FILL: real social URLs -->
+Logo: `Melt_logo-RGB.png` (see Section 1), displayed next to the Follow links, "Fit" mode.
+Applied live 2026-10-16, replacing an old placeholder logo.
+<!-- Note: this Footer spec above (Find Us/Hours/Follow text) is stale relative to what's
+     actually live — the real footer currently shows "Hazel Green, Alabama" / "Studio" /
+     "No walk-in hours — reach out through the contact form." / Follow: Facebook, Instagram.
+     Not corrected here since it's outside the scope of the logo-swap this entry documents. -->
 ```
 
 ## 7. Functionality
