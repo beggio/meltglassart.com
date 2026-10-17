@@ -597,3 +597,31 @@ to be removed and replaced with the actual logo file from the repo.
 - Checked independently in both Desktop View and Mobile View, then confirmed live via an
   authenticated fetch of the Home page HTML (`logo.jpg` absent, `Melt_logo-RGB` present)
   before considering this done.
+
+## 2026-10-17 — About page hero image recropped so Brooke's head isn't cut off
+
+Client reported the top (hero) image on the About page still had Brooke's head cut off, and
+asked for it to be replaced and recropped so the crop removes the bottom of the image instead
+of the top.
+
+**Applied live:**
+- The hero is a full-bleed background-image section (`Fill Screen`), not a Fluid Engine image
+  block, so there's no separate crop file — the live frame is a focal-point crop of the
+  existing source photo (market-booth photo of Brooke at a show, filename
+  `468787199_180528317873111..._81_n.jpg`). The photo itself already contains her full head;
+  the section's focal point was just centered too low (on her torso), so the top of the frame
+  cropped her head off.
+- No need to replace the source file — confirmed via the image's own crop/edit tool that the
+  full photo (head included) was already there. Fixed it by dragging the focal-point indicator
+  on the background image's thumbnail (Background tab → Image → the small circle on the
+  thumbnail) upward to center on her head instead of her torso. Squarespace's "Fill Screen"
+  crop now keeps the top of the frame and crops from the bottom (her boots/legs are now out of
+  frame) instead of the top.
+- Checked independently in both Desktop View and Mobile View — her head, sunglasses, and
+  beanie are fully visible with clean margin above in both.
+
+**Lesson:** for a full-bleed background-image section (not a Fluid Engine image block), "crop"
+is controlled by the focal-point indicator on the small thumbnail in Background → Image, not
+by the destructive "Edit image" → Crop tool (which permanently re-crops the source file). Drag
+that focal point toward the subject that must stay in frame rather than reaching for the crop
+tool first.
